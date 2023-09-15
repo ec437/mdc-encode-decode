@@ -34,6 +34,10 @@
 #ifndef _MDC_DECODE_H_
 #define _MDC_DECODE_H_
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 // #define MDC_FIXEDMATH // if you want this, define before mdc_types.h
 
 #include "mdc_types.h"
@@ -199,5 +203,9 @@ int mdc_decoder_get_double_packet(mdc_decoder_t *decoder,
  */
 
 int mdc_decoder_set_callback(mdc_decoder_t *decoder, mdc_decoder_callback_t callbackFunction, void *context);
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif

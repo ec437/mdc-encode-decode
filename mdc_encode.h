@@ -36,6 +36,10 @@
 #ifndef _MDC_ENCODE_H_
 #define _MDC_ENCODE_H_
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #include "mdc_types.h"
 
 //#define FILL_FINAL	// fills the end of the last block with zeros, rather than returning fewer samples than requested
@@ -145,6 +149,10 @@ int mdc_encoder_set_double_packet(mdc_encoder_t *encoder,
 int mdc_encoder_get_samples(mdc_encoder_t *encoder,
                             mdc_sample_t *buffer,
                             int bufferSize);
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif
 
